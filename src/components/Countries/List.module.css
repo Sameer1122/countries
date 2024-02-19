@@ -1,0 +1,27 @@
+.container {
+  background-color: white;
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.infoRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+.infoRow > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.infoRow p {
+    color: #5C6C80;
+}

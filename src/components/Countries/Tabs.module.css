@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  margin-top: 10rem !important;
+  width: 75%;
+  margin: auto;
+}
+.container > div {
+  padding: 1rem 1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.container > .divActive {
+    padding: 1rem 1rem;
+    border-top: 1px solid #002377;
+    border-bottom: 1px solid #002377;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    background-color: #002377;
+    color: #fff;
+  }
+.container > div:nth-child(1){
+    border-left: 1px solid #ccc;
+    border-radius: 8px 0 0 0;
+} 
+.container > div:nth-child(4){
+    border-right: 1px solid #ccc;
+    border-radius: 0 8px 0px 0;
+} 

@@ -22,3 +22,43 @@
   grid-template-columns: 50% 50%;
   gap: 1rem;
 }
+@media only screen and (max-width: 1200px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .container > div:nth-child(1) {
+    width: 40%;
+  }
+  .container > div:nth-child(2) {
+    width: 60%;
+  }
+  .listGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .container > div:nth-child(1) {
+    width: 100%;
+  }
+  .container > div:nth-child(2) {
+    width: 100%;
+  }
+  .listGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+}

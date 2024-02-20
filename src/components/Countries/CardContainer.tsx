@@ -2,35 +2,65 @@ import React from "react";
 import styles from "./CardContainer.module.css";
 import Card from "./Card";
 import List from "./List";
+import SouthernMap from "../../utils/SouthernMap";
+import EasternMap from "../../utils/EasternMap";
+import Western from "../../utils/Western";
+import InternationalMap from "../../utils/International";
+import {
+  easternAfrica,
+  international,
+  southernAfrica,
+  westernAfrica,
+} from "../../utils/DummyData";
 interface TabsProps {
   tabValue: string;
 }
 const CardContainer: React.FC<TabsProps> = ({ tabValue }) => {
-  const southernAfrica = [
-    { id: 0,image:"/botswana.svg", name: "Botswana", capital: "Gaborone", currency: "Botswana Pula" },
-    { id: 1,image:"/eswatini.svg", name: "Eswatini", capital: "Mbabane", currency: "Botswana Pula" },
-    { id: 2,image:"/lesotho.svg", name: "Lesotho", capital: "Maseru", currency: "Botswana Pula" },
-    { id: 3,image:"/malawi.svg", name: "Malawi", capital: "Lilongwe", currency: "Botswana Pula" },
-    { id: 4,image:"/mozambique.svg", name: "Mozambique", capital: "Maputo", currency: "Botswana Pula" },
-    { id: 5,image:"/namibia.svg", name: "Namibia", capital: "Windhoek", currency: "Botswana Pula" },
-    {
-      id: 6,image:"/south-africa.svg",
-      name: "South Africa",
-      capital: "Capital city: Pretoria, Cape Town, and Bloemfontein",
-      currency: "Botswana Pula",
-    },
-    { id: 7,image:"/zambia.svg", name: "Zambia", capital: "Lusaka", currency: "Botswana Pula" },
-    { id: 8,image:"/zimbabwe.svg", name: "Zimbabwe", capital: "Harare", currency: "Botswana Pula" },
-  ];
   return (
-    <div className={styles.container}>
-      <div>
-        <Card />
-      </div>
-      <div className={styles.listGrid}>
-        {southernAfrica.map((val) => (
-          <List val={val} />
-        ))}
+    <div className={styles.upperContainer}>
+      <div className={styles.container}>
+        <div>
+          {tabValue === "southren-africa" && (
+            <Card
+              title={"Southern & Central Africa"}
+              image={<SouthernMap />}
+              Description={""}
+            />
+          )}
+          {tabValue === "western-africa" && (
+            <Card
+              title={"Western Africa"}
+              image={<Western />}
+              Description={""}
+            />
+          )}
+          {tabValue === "eastern-africa" && (
+            <Card
+              title={"Eastern Africa"}
+              image={<EasternMap />}
+              Description={""}
+            />
+          )}
+          {tabValue === "international" && (
+            <Card
+              title={"International"}
+              image={<InternationalMap />}
+              Description={""}
+            />
+          )}
+        </div>
+        <div className={styles.listGrid}>
+          {tabValue === "southren-africa" &&
+            southernAfrica.map((val) => <List val={val} />)}
+          {tabValue === "western-africa" &&
+            westernAfrica.map((val) => <List val={val} />)}
+          {tabValue === "eastern-africa" &&
+            easternAfrica.map((val) => <List val={val} />)}
+          {tabValue === "international" &&
+            international.map((val) => (
+              <List val={val} isInternational={true} />
+            ))}
+        </div>
       </div>
     </div>
   );

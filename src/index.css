@@ -2,3 +2,14 @@
   margin: 0;
   padding: 0;
 }
+/* In your CSS file (e.g., styles.css) */
+@font-face {
+  font-family: "Benton Sans"; /* Choose a name for your font */
+  src: url("/public/BentonSans.otf") format("opentype"); /* Adjust the path and format accordingly */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: sans-serif; /* Use the font in your styles */
+}

@@ -11,6 +11,16 @@
   align-items: flex-start;
   gap: 1rem;
 }
+.titleRow h4 {
+  color: #0051ff;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+}
+.titleRow p {
+  color: #1a314d;
+  font-size: 12px;
+}
 .infoRow {
   display: flex;
   flex-direction: column;
@@ -18,10 +28,11 @@
   gap: 0.5rem;
 }
 .infoRow > div {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .infoRow p {
-    color: #5C6C80;
+  color: #5c6c80;
+  font-size: 12px;
 }

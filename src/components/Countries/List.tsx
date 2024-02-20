@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./List.module.css";
-const List = ({ val }: any) => {
+const List = ({ val, isInternational }: any) => {
   return (
     <div className={styles.container}>
       <div className={styles.titleRow}>
         <img src={val.image} alt="" />
         <div>
           <h4>{val.name}</h4>
-          <p>Capital city: {val.capital}</p>
+          <p>
+            {!isInternational && "Capital city:"} {val.capital}
+          </p>
         </div>
       </div>
       <div className={styles.infoRow}>
